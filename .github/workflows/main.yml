@@ -11,7 +11,7 @@ public class ProductCalculator {
         }
 
         double product = calculateProduct(numbers);
-        System.out.println("Product of the five numbers: " + product);
+        System.out.println("Product of the five numbers)" + product:));
     }
 
     public static double calculateProduct(double[] arr) {
