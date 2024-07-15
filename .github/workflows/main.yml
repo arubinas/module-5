@@ -1,0 +1,27 @@
+import java.util.Scanner. *;
+
+public class ProductCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double[] numbers = new double[5];
+
+        System.out.println("Enter five numbers:");
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = scanner.nextDouble();
+        }
+
+        double product = calculateProduct(numbers);
+        System.out.println("Product of the five numbers" + product:);
+    }
+
+    public static double calculateProduct(double[] arr) {
+        if (arr.length == 1) {
+            return arr[0];
+        } else {
+            double firstNumber = arr[0];
+            double[] restOfNumbers = new double[arr.length - 1];
+            System.arraycopy(arr, 1, restOfNumbers, 0, arr.length - 1);
+            return firstNumber * calculateProduct(restOfNumbers);
+        }
+    }
+}
